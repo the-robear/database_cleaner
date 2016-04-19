@@ -57,7 +57,7 @@ Here is an overview of the strategies supported for each library:
     </tr>
     <tr>
       <td> Mongoid</td>
-      <td> <b>Yes</b></td>
+      <td> <b>Yes*</b></td>
       <td> No</td>
       <td> No</td>
     </tr>
@@ -82,13 +82,14 @@ Here is an overview of the strategies supported for each library:
     <tr>
       <td>Neo4j</td>
       <td>Yes</td>
-      <td>Yes*</td>
-      <td>Yes*</td>
+      <td>Yes**</td>
+      <td>Yes**</td>
     </tr>
   </tbody>
 </table>
 
-\* Truncation and Deletion strategies for Neo4j will just delete all nodes and relationships from the database.
+\* Note: WiredTiger (new to Mongo >= 3.2) is not currently supported. To use DatabaseCleaner, use MMAPV1 (`mongod --storageEngine mmapv1`)
+\*\* Truncation and Deletion strategies for Neo4j will just delete all nodes and relationships from the database.
 
 <table>
   <tbody>
